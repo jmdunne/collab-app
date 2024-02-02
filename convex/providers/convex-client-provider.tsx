@@ -25,8 +25,8 @@ export const ConvexClientProvider = ({
     // Wrapping the child components with the ClerkProvider and ConvexProviderWithClerk components
     <ClerkProvider>
       <ConvexProviderWithClerk useAuth={useAuth} client={convex}>
-        {children} // Rendering the child components within the
-        ConvexProviderWithClerk component
+        {/* Rendering the child components within the ConvexProviderWithClerk component */}
+        {children}
       </ConvexProviderWithClerk>
     </ClerkProvider>
   );

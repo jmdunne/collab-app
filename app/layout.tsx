@@ -19,6 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        {/*
+        The ConvexClientProvider component is used here to wrap the children prop.
+        This component sets up a client for interacting with a Convex API.
+        The children prop allows you to insert any JSX or component between the opening and closing tags of the parent component.
+        Whatever is placed between <ConvexClientProvider> and </ConvexClientProvider> in your JSX code will be passed to ConvexClientProvider as its children prop.
+      */}
         <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
