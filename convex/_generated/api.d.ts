@@ -15,6 +15,7 @@ import type {
   FunctionReference,
 } from "convex/server";
 import type * as providers_convex_client_provider from "../providers/convex-client-provider.js";
+import type * as providers_convex_client_provider from "../providers/convex-client-provider.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -25,6 +26,7 @@ import type * as providers_convex_client_provider from "../providers/convex-clie
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  "providers/convex-client-provider": typeof providers_convex_client_provider;
   "providers/convex-client-provider": typeof providers_convex_client_provider;
 }>;
 export declare const api: FilterApi<
