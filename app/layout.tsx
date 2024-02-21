@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { ConvexClientProvider } from "@/convex/providers/convex-client-provider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({
         The children prop allows you to insert any JSX or component between the opening and closing tags of the parent component.
         Whatever is placed between <ConvexClientProvider> and </ConvexClientProvider> in your JSX code will be passed to ConvexClientProvider as its children prop.
       */}
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+        <ConvexClientProvider>
+          <ClerkProvider>{children}</ClerkProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   );
