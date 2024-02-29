@@ -26,6 +26,11 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["./**/*"],
+  "include": [
+    "./**/*",
+    "../providers/providers",
+    "../providers/convex-client-provider.js",
+    "../providers/convex-client-provider.tsx"
+  ],
   "exclude": ["./_generated"]
 }
