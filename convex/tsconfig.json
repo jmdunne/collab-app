@@ -18,7 +18,13 @@
     "moduleResolution": "Node",
     "isolatedModules": true,
     "skipLibCheck": true,
-    "noEmit": true
+    "noEmit": true,
+
+    /* Add these lines */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["./**/*"],
   "exclude": ["./_generated"]

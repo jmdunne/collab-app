@@ -14,16 +14,20 @@ var convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
 var convex = new react_1.ConvexReactClient(convexUrl);
 // Defining the ConvexClientProvider component
 var ConvexClientProvider = function (_a) {
-    var children = _a.children;
-    return (
+  var children = _a.children;
+  return (
     // Wrapping the child components with the ClerkProvider and ConvexProviderWithClerk components
     <nextjs_1.ClerkProvider>
-      <react_clerk_1.ConvexProviderWithClerk useAuth={nextjs_1.useAuth} client={convex}>
+      <react_clerk_1.ConvexProviderWithClerk
+        useAuth={nextjs_1.useAuth}
+        client={convex}
+      >
         <react_1.Authenticated>{children}</react_1.Authenticated>
         <react_1.AuthLoading>
           <loading_1.Loading />
         </react_1.AuthLoading>
       </react_clerk_1.ConvexProviderWithClerk>
-    </nextjs_1.ClerkProvider>);
+    </nextjs_1.ClerkProvider>
+  );
 };
 exports.ConvexClientProvider = ConvexClientProvider;

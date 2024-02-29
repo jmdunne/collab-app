@@ -6,7 +6,7 @@ import { ClerkProvider, useAuth } from "@clerk/nextjs"; // Provides authenticati
 import { ConvexProviderWithClerk } from "convex/react-clerk"; // Integrates Convex with Clerk authentication
 import { AuthLoading, Authenticated, ConvexReactClient } from "convex/react"; // Provides the Convex client and related components
 
-import { Loading } from "@/components/auth/loading"; // Provides the loading component
+import { Loading } from "@/components/auth/loading"; // Loading component
 
 // Defining the props for the ConvexClientProvider component
 interface ConvexClientProviderProps {
